@@ -1,3 +1,6 @@
 .idea/
 product-service/.mvn
 product-service/.env
+
+inventory-service/.mvn
+inventory-service/src/main/resources/application.properties

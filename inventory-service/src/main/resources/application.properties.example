@@ -1,0 +1,7 @@
+spring.application.name=inventory-service
+
+# MongoDB Atlas URI
+spring.data.mongodb.uri=mongodb+srv://<username>:<password>@<cluster>.mongodb.net/<dbname>?retryWrites=true&w=majority
+
+# Application port (must match what's exposed in Dockerfile/docker-compose)
+server.port=8587
