@@ -1,6 +1,9 @@
 .idea/
+docker-compose.yml
 product-service/.mvn
 product-service/.env
 
 inventory-service/.mvn
+inventory-service/.env
 inventory-service/src/main/resources/application.properties
+inventory-service/docker-compose.yml

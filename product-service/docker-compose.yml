@@ -25,7 +25,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 1234
     ports:
-      - "5433:5432" # internal 5432 → exposed 5433 to avoid host port clashes
+      - "5432:5432" # internal 5432 → exposed 5433 to avoid host port clashes
     networks:
       - backend
 
