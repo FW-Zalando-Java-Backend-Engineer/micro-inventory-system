@@ -3,6 +3,7 @@
 The structure for the two microservices:
 
 
+```
 micro-inventory-system/
 ├── product-service/
 │   ├── src/main/java/com/example/product/
@@ -14,7 +15,7 @@ micro-inventory-system/
 │   │   ├── service/
 │   │   └── ProductServiceApplication.java
 │   ├── src/main/resources/
-│   │   ├── application.yml
+│   │   └── application.yml
 │   ├── Dockerfile
 │   ├── .env
 │   ├── pom.xml
@@ -30,10 +31,12 @@ micro-inventory-system/
 │   │   ├── service/
 │   │   └── InventoryServiceApplication.java
 │   ├── src/main/resources/
-│   │   ├── application.yml
+│   │   └── application.yml
 │   ├── Dockerfile
 │   ├── .env
 │   ├── pom.xml
 │   └── docker-compose.yml
 │
 ├── docker-compose.yml         <-- root orchestrator
+```
+
