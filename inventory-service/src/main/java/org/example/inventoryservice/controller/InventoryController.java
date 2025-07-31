@@ -26,7 +26,7 @@ public class InventoryController {
     /**
      * POST / — creates or updates the stock entry for a product.
      */
-    @PostMapping
+    @PostMapping({ "", "/" })
     public void createOrUpdate(@RequestBody InventoryRequest request) {
         inventoryService.createOrUpdateStock(request.productId(), request.quantity());
     }

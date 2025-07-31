@@ -32,7 +32,7 @@ public class InventoryClient {
      */
     public int getStockQuantity(Long productId){
         Integer quantity = restTemplate.getForObject(
-                inventoryServiceUrl + "/" + productId,
+                inventoryServiceUrl  + productId,
                 Integer.class
         );
         return quantity != null ? quantity : 0;

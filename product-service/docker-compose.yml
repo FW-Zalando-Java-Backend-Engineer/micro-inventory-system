@@ -12,10 +12,11 @@ services:
       SPRING_DATASOURCE_URL: jdbc:postgresql://products_db:5432/products
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: 1234
+      INVENTORY_SERVICE_URL: http://inventory-service:8587/api/inventory/
     depends_on:
       - products_db
     networks:
-      - backend
+      - micro-net
 
   products_db:
     image: postgres:15
@@ -25,10 +26,10 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 1234
     ports:
-      - "5432:5432" # internal 5432 → exposed 5433 to avoid host port clashes
+      - "5432:5432"
     networks:
-      - backend
+      - micro-net
 
 networks:
-  backend:
-    driver: bridge
+  micro-net:
+    external: true
