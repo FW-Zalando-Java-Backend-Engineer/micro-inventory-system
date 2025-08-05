@@ -11,6 +11,9 @@ import java.util.List;
 
 /**
  * REST controller exposing product-related HTTP endpoints.
+ * By default, our SecurityConfig already enforces that every request must be authenticated.
+ * Without an Authorization: Bearer <token> header:
+ * We get 401 Unauthorized.
  */
 @RestController
 @RequestMapping("/products")

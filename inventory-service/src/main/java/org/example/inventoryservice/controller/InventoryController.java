@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.*;
 
 /**
  * REST controller for managing inventory.
+ *  By default, our SecurityConfig already enforces that every request must be authenticated.
+ *  Without an Authorization: Bearer <token> header:
+ *  We get 401 Unauthorized.
  */
 @RestController
 @RequestMapping("/api/inventory")

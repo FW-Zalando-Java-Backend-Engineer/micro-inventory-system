@@ -1,4 +1,5 @@
-package org.example.product.config;
+package org.example.inventoryservice.config;
+
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -38,12 +39,12 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-            // Secure All Requests
+                // Secure All Requests
                 .authorizeHttpRequests(
                         auth -> auth
                                 .anyRequest().authenticated() // means every single http request to this service must include a valid JWT.
                 )
-           // Configure this service as oauth2 resource server
+                // Configure this service as oauth2 resource server
                 .oauth2ResourceServer(
                         oauth2 -> oauth2
                                 .jwt(
